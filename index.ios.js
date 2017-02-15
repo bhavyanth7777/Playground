@@ -13,12 +13,14 @@ import {
 } from 'react-native';
 
 import CustomText from './src/CustomText';
+import CustomImage from './src/CustomImage';
 
 export default class Playground extends Component {
   render() {
     return (
       <View style={styles.container}>
         <CustomText textContent='Yolo'/>
+        <CustomImage fromWeb={false} />
       </View>
     )
   }
