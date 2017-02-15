@@ -4,22 +4,20 @@ import { View, Image, StyleSheet } from 'react-native'
 export default class CustomImage extends Component {
     
   render() {
-      const{fromWeb} = this.props
-      console.log({fromWeb})
+      const{fromWeb, imageName} = this.props
       if(fromWeb){
         return (
       <Image
         style={styles.image}
-        source={{uri: 'http://www.reactnativeexpress.com/logo.png'}}
+        source={{uri: imageName}}
       />
         )
     }
     else{
-        console.log("In else")
         return(
             <Image
         style={styles.image}
-        source={require('../images/logo.png')}
+        source={imageName}
       />
         )
     }

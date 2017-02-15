@@ -20,7 +20,7 @@ export default class Playground extends Component {
     return (
       <View style={styles.container}>
         <CustomText textContent='Yolo'/>
-        <CustomImage fromWeb={false} />
+        <CustomImage fromWeb={false} imageName={require('./images/logo.png')}/>
       </View>
     )
   }
