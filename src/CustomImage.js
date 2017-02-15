@@ -5,22 +5,10 @@ export default class CustomImage extends Component {
     
   render() {
       const{fromWeb, imageName} = this.props
-      if(fromWeb){
+      var source = (fromWeb)? {uri: imageName}: imageName
         return (
-      <Image
-        style={styles.image}
-        source={{uri: imageName}}
-      />
+      <Image style={styles.image} source={source}/>
         )
-    }
-    else{
-        return(
-            <Image
-        style={styles.image}
-        source={imageName}
-      />
-        )
-    }
   }
 }
 
