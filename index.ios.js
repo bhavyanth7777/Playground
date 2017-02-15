@@ -8,45 +8,35 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View
+  View,
+  Image
 } from 'react-native';
+
+import CustomText from './src/CustomText';
 
 export default class Playground extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box]} />
-        <View style={[styles.box,{backgroundColor: 'red'}]} />
-        <View style={[styles.box,{backgroundColor: 'yellow'}]} />
-        <View style={[styles.box,{backgroundColor: 'green'}]} />
-        <View style={[styles.box,{backgroundColor: 'orange'}]} />
-        <View style={[styles.box,{backgroundColor: 'pink'}]} />
-        <View style={[styles.box,{backgroundColor: 'teal'}]} />
+        <Image
+        style={styles.image}
+        source={{uri: 'http://www.reactnativeexpress.com/logo.png'}}
+      />
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    backgroundColor: '#F5FCFF',
-    flexWrap: 'wrap',
-    padding: 15
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  box: {
-    width: 150,
-    height: 150,
-    backgroundColor: 'skyblue',
-    borderWidth: 2,
-    borderColor: 'steelblue',
-    borderRadius: 20,
-    margin: 10
+  image: {
+    width: 200,
+    height: 200,
   },
-});
+})
 
 AppRegistry.registerComponent('Playground', () => Playground);
